@@ -8,42 +8,52 @@ window.addEventListener("scroll", function(){
     let windowHeight = window.innerHeight;
     let image1Position = image1[0].getBoundingClientRect().top;
     let image2Position = image2[0].getBoundingClientRect().top;
-    if (image1Position - windowHeight <= -1250){
-        image1[0].style.opacity = 0;
-        image1[0].style.transition = "opacity 0.5s ease-in-out";
+    if (window.innerWidth > 1024){
+      if (image1Position - windowHeight <= -1250){
+          image1[0].style.opacity = 0;
+          image1[0].style.transition = "opacity 0.5s ease-in-out";
+      } else{
+          image1[0].style.opacity = 1;
+      }
+      if (image2Position - windowHeight <= -50){
+          image2[0].style.opacity = 1;
+          image2[0].style.transition = "opacity 0.5s ease-in-out";
+      } else{
+          image2[0].style.opacity = 0;
+      }
     } else{
-        image1[0].style.opacity = 1;
+      image1[0].style.opacity = 1;
+      image2[0].style.opacity = 1;
     }
 
-    if (image2Position - windowHeight <= -450){
-        image2[0].style.opacity = 1;
-        image2[0].style.transition = "opacity 0.5s ease-in-out";
-    } else{
-        image2[0].style.opacity = 0;
-    }
     console.log("windowheight is " + windowHeight)
     console.log("image2pos is " + image2Position)
     console.log("image1pos is " + image1Position)
 })
 
-window.addEventListener("wheel", function(event) {
-    if (event.deltaY > 0) {
-        // User scrolled down, do something
-        navBar.style.animation = "slide-out 0.5s ease-out";
-        setTimeout(() => {
-            navBar.style.display = `none`;
-        }, 475);
-    }
-});
+let prevScrollPos = window.scrollY;
+let hideNavBarTimeout;
 
-window.addEventListener("wheel", function(event) {
-    if (event.deltaY < 0) {
-        // User scrolled up, do something
-        navBar.style.animation = "slide-in 0.5s ease-in";
-        setTimeout(() => {
-            navBar.style.display = `flex`;
-        }, 300);
-    }
+window.addEventListener("scroll", function() {
+  const currentScrollPos = window.scrollY;
+  clearTimeout(hideNavBarTimeout);
+  if (currentScrollPos > prevScrollPos) {
+    // User scrolled down, hide the navigation bar
+    navBar.style.animation = "slide-out 0.5s ease-out";
+    navBar.style.display = "none";
+  } else {
+    // User scrolled up, show the navigation bar
+    navBar.style.animation = "slide-in 0.5s ease-in";
+    navBar.style.display = "flex";
+    
+    // Delay hiding the navigation bar in case of quick scroll direction change
+    hideNavBarTimeout = setTimeout(() => {
+      navBar.style.animation = "slide-out 0.5s ease-out";
+      navBar.style.display = "none";
+    }, 1000);
+  }
+
+  prevScrollPos = currentScrollPos;
 });
 
 let isShow = false;

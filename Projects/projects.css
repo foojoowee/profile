@@ -185,9 +185,6 @@
     }
 }
 
-
-
-
 @media (max-width: 1024px){
     .featured-projects{
         scale: 0.8;
@@ -264,4 +261,5 @@
     .other-project-2 .project-container, .other-project-4 .project-container {
         flex-direction: column-reverse;
     }
+
 }

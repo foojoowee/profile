@@ -10,6 +10,7 @@ body{
     font-size: 16px;
     /* background: url("Assets/blue-bg.jpg"); */
     opacity: 1.0;
+    height: 100%
 }
 
 /* #main-container{
@@ -129,9 +130,11 @@ body{
     display: flex;
     flex-direction: column;
     width: 100vw;
+    min-height: 100%;
 }
 
 #main-page{
+    margin-top: 150px;
     margin-bottom: 100px;
 }
 
@@ -174,6 +177,13 @@ body{
     background: #20203b;
     color:white;
     width: 100%;
+}
+
+.footer-contact #footer{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 
@@ -487,11 +497,11 @@ body{
     font-size: 1.0rem;
     text-align: center;
     margin: 30px 30px;
+    padding-bottom: 20px;
 }
 
 #contact-content{
     display: flex;
-    flex: wrap;
     color: black;
     justify-content: space-between;
     margin: 40px 30px;
@@ -514,11 +524,16 @@ body{
 #contact-email, #contact-phone, #contact-socials{
     justify-content: center;
     text-align: center;
-    padding: 30px 10px;
-    min-width: 30%;
-    flex-basis: 33%;
+    padding: 20px 10px;
+    width: 200px;
     border: 1px solid black;
+    border-radius: 10px;
+    background: rgb(245, 230, 232);
+    transition: scale 0.2s
+}
 
+#contact-email:hover, #contact-phone:hover, #contact-socials:hover{
+    scale: 1.1;  
 }
 
 .contact-content-header{
@@ -585,5 +600,22 @@ body{
     }
     #main-containter{
         overflow-x: auto;
+    }
+    #contact-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0px auto;
+        align-items: center;
+    }
+    #contact-email, #contact-phone, #contact-socials{
+        margin-bottom: 30px;
+    }
+    #contact-main-wrapper{
+        scale: 0.8;
+    }
+    #main-page{
+        margin-top: 50px;
+        margin-bottom: 0px;;
     }
 }
