@@ -544,17 +544,11 @@ body{
 }
 
 
-
-
 @media (max-width: 1024px){
-    .links a{
-        font-size: 1.1rem;
-    }
     #footer .links{
         display: none;
     }
 }
-
 
 @media (max-width: 768px){
     .links{
@@ -571,7 +565,7 @@ body{
         flex-direction: column;
     }
     #copyright{
-        margin-bottom: 20px;
+        margin-top: 15px;
         scale: 0.8;
     }
     #author{
@@ -579,6 +573,7 @@ body{
     }
     #author-name{
         display: none;
+        margin-top: 0px;
     }
     #icons{
         margin-bottom: -40px;

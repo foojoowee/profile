@@ -3,6 +3,7 @@
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 100px;
+    margin-top: 150px;
     width: 700px;
     font-size: 1.2rem;
     padding-left: 100px;
@@ -38,7 +39,7 @@
 #about-content{
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: start;
     padding: 10px;
     margin-top: 10px;
     font-size: 1.0rem;
@@ -57,7 +58,7 @@
     padding: 0px;
     width: 70%;
     margin-left: 30px;
-    margin-top: -10px;
+    margin-top: 8px;
 }
 
 #about-left-text3{
@@ -65,7 +66,7 @@
     width: 70%;
     padding-right: 20px;
     margin-left: 10px;
-    margin-top: -45px;
+    margin-top: -5px;
 }
 
 .red-line{
@@ -78,7 +79,7 @@
 .blue-lines{
     position: absolute;
     left: 0%;
-    top : 13%;
+    margin-top: 110px;
     z-index: -1;
 }
 
@@ -90,6 +91,9 @@
     margin-bottom: 1.4rem;
 }
 
+.add-blue-line{
+    display: none;
+}
 
 #resume-button a{
     color: white;
@@ -123,6 +127,7 @@
 }
 
 #about-page-2 #about-right-text img{
+    margin-top: 50px;
     margin-left: 20px;
     animation-delay: 2.5s;
     opacity: 0;
@@ -208,8 +213,13 @@
 @media (max-width: 768px){
     #about-main-wrapper{
         scale: 0.7;
-        margin-top: -150px;
-        margin-bottom: -50px;
+        margin-top: 0px;
         margin-left: -50px;
+        max-width: 600px;
+        min-width: 600px;
+        padding-left: 50px;
+    }
+    .add-blue-line{
+        display: block;
     }
 }
