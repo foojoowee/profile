@@ -1,5 +1,15 @@
 /* Styling for about.html */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; 
+
+}
+
 #about-main-wrapper{
+    display: flex;
+    flex-direction: column;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 100px;
@@ -127,7 +137,6 @@
 }
 
 #about-page-2 #about-right-text img{
-    margin-top: 50px;
     margin-left: 20px;
     animation-delay: 2.5s;
     opacity: 0;
@@ -213,13 +222,16 @@
 @media (max-width: 768px){
     #about-main-wrapper{
         scale: 0.7;
-        margin-top: 0px;
-        margin-left: -50px;
+        margin-top: 50px;
+        margin-bottom: 0px;
         max-width: 600px;
-        min-width: 600px;
+        min-width: 550px;
         padding-left: 50px;
     }
     .add-blue-line{
         display: block;
+    }
+    #about-page-2 #about-right-text img{
+        margin-top: 50px;
     }
 }
