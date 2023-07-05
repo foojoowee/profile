@@ -544,6 +544,18 @@ body{
 }
 
 
+
+
+@media (max-width: 1024px){
+    .links a{
+        font-size: 1.1rem;
+    }
+    #footer .links{
+        display: none;
+    }
+}
+
+
 @media (max-width: 768px){
     .links{
         display: none; 
@@ -574,16 +586,4 @@ body{
         display: flex;
         flex-direction: row;
     }
-}
-
-
-@media (max-width: 1024px){
-    .links a{
-        font-size: 1.1rem;
-    }
-    #footer .links{
-        display: none;
-    }
-
-
 }
