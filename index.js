@@ -1,0 +1,84 @@
+const loadingPage = document.getElementById("loading-page")
+const loadingMsg = document.getElementById("loading-message")
+const mainContent = document.getElementById("main-container")
+const navBar = document.getElementById("nav");
+const navBarStyle = navBar.querySelectorAll("p");
+const loadingImg = loadingPage.querySelector("img");
+
+window.addEventListener("wheel", function(event) {
+    if (event.deltaY > 0) {
+        // User scrolled down, do something
+        navBar.style.animation = "slide-out 0.5s ease-out";
+        setTimeout(() => {
+            navBar.style.display = `none`;
+        }, 475);
+    }
+});
+
+window.addEventListener("wheel", function(event) {
+    if (event.deltaY < 0) {
+        // User scrolled up, do something
+        navBar.style.animation = "slide-in 0.3s ease-in";
+        setTimeout(() => {
+            navBar.style.display = `flex`;
+        }, 250);
+    }
+});
+
+// Boolean Flag
+let isShow = false;
+function showHideMenu(){
+    const dropMenu = document.getElementById("drop-down-menu")
+    if (isShow){
+        dropMenu.style.animation = "slide-out-X 0.5s ease-out";
+        setTimeout(() => {
+            dropMenu.style.display = "none";;
+        }, 450);
+        isShow = false;
+    } else {
+        dropMenu.style.display = "flex";
+        dropMenu.style.animation = "slide-in-X 0.3s ease-in";
+        isShow = true;
+    }
+}
+
+  
+//Load page code-to add when deploying website
+
+// window.addEventListener("load", function(){
+//     loadingPage.style.animation = "load-page 5s ease-in";
+//     // loadingImg.style.animation = "size-up 5s ease-in";
+//     console.log("Page is loaded");
+//     setTimeout(() => {
+//         loadingMsg.style.fontSize = '1.25em';
+//         loadingMsg.innerHTML = "<p>Didn't see you there</p>";
+//         loadingImg.style.height = "7em";
+//     }, 2100);
+//     setTimeout(() => {
+//         loadingMsg.style.fontSize = '1.5em';
+//         loadingMsg.innerHTML = "<p>Welcome to my Website</p>";
+//         loadingImg.style.height = "10em";
+//     }, 4000);
+//     setTimeout(() => {
+//         loadingPage.style.animation = "fade-out 1s ease-out";
+//     // loadingImg.addEventListener("animationend", function(){
+//     //     loadingImg.style.height = "10em";
+//     }, 6000);
+//     setTimeout(() => {
+//         loadingPage.style.animation = "fade-out 1s ease-out";
+//         loadingImg.style.height = "25em";
+//         loadingMsg.innerHTML = "<p>LIFE IS BUT AN ILLUSION</p>";
+//     }, 7000);
+//     setTimeout(() => {
+//         loadingPage.style.display = "none";
+//         mainContent.style.animation = "fade-in 2s ease-in";
+//         mainContent.style.display = "flex";
+//     }, 7200);
+// });
+
+
+
+  
+  
+  
+  

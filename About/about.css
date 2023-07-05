@@ -1,0 +1,215 @@
+/* Styling for about.html */
+#about-main-wrapper{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+    width: 700px;
+    font-size: 1.2rem;
+    padding-left: 100px;
+    padding-right: 10px;
+    border-radius: 5px;
+    color: rgb(19, 18, 18);
+    box-shadow: 0 0 20px 5px #494545;
+    position: relative;
+    overflow: hidden;
+    line-height: 1.45;
+}
+
+#about-header{
+    display: flex;
+    justify-content: center;
+    color: rgb(0, 0, 0);
+}
+
+#about-header h2{
+    margin-top: 30px;
+    padding: 5px 35px;
+    border: 2px solid black;
+    border-radius: 10px;;
+}
+
+#header-line{
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 80px;
+}
+
+#about-content{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 1.0rem;
+}
+
+#about-left-text{
+    padding: 0px;
+    width: 70%;
+    padding-right: 20px;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+
+#about-left-text2{
+    padding: 0px;
+    width: 70%;
+    margin-left: 30px;
+    margin-top: -10px;
+}
+
+#about-left-text3{
+    padding: 0px;
+    width: 70%;
+    padding-right: 20px;
+    margin-left: 10px;
+    margin-top: -45px;
+}
+
+.red-line{
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background: red;
+}
+
+.blue-lines{
+    position: absolute;
+    left: 0%;
+    top : 13%;
+    z-index: -1;
+}
+
+.blue-line{
+    height: 1px;
+    width: 100vw;
+    min-width: 1000px;
+    background: rgb(59, 156, 156);
+    margin-bottom: 1.4rem;
+}
+
+
+#resume-button a{
+    color: white;
+    text-decoration: none;
+}
+
+#about-left-text a:hover{
+    color: rgb(216, 185, 185);
+    text-decoration: underline;
+}
+
+#about-page-2 #about-left-text{
+    padding: 20px;
+    width: 70%;
+    padding-left: 30px;
+}
+
+#about-page-1 #about-right-text img{
+    height: 250px;
+
+}
+
+#about-right-text img, #resume-button img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    height: 200px;
+    padding: 10px;
+    animation: fade-in 1.0s ease-in forwards;
+}
+
+#about-page-2 #about-right-text img{
+    margin-left: 20px;
+    animation-delay: 2.5s;
+    opacity: 0;
+}
+
+#about-page-3 img{
+    margin-left: 20px;
+    animation-delay: 5.0s;
+    opacity: 0;
+}
+
+#about-right-text p{
+    display: flex;
+    justify-content: center;
+    font-size: 0.8rem;
+}
+
+#image-text{
+    opacity: 0;
+    animation: fade-in 1.0s ease-in forwards;
+    animation-delay: 5.0s;
+}
+
+#resume-text{
+    opacity: 0;
+    animation: fade-in 1.0s ease-in forwards;
+    animation-delay: 7.0s;
+}
+
+
+#resume-button img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    height: 200px;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+#resume-button button{
+    display: flex;
+    margin: auto;
+    font-size: 0.8rem;
+    padding: 5px 5px;
+    color:white;
+    background: rgb(54, 169, 223);
+    border: none;
+    cursor:pointer;
+}
+
+#resume-button button:hover{
+    background: rgb(54, 121, 151);
+}
+
+#resume-button button img{
+   height: 15px;
+   padding: 0px;
+   margin: 0px 5px;
+}
+
+#testing{
+    width: fit-content;
+}
+
+@keyframes cursor{
+    50% {border-color: transparent}
+}
+
+@keyframes typing{
+    from {width:0}
+}
+
+@keyframes fade-in{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@media (max-width: 768px){
+    #about-main-wrapper{
+        scale: 0.7;
+        margin-top: -150px;
+        margin-bottom: -50px;
+        margin-left: -50px;
+    }
+}

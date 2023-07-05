@@ -1,0 +1,151 @@
+.blog-main-wrapper{
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    top: 200px;
+    bottom: 200px;
+    height: 50%;
+    width: 60%;
+    min-height: 400px;
+    min-width: 800px;
+    margin-bottom: 100px;
+}
+
+#blog-header{
+    font-size: 1.2em;
+
+}
+
+#blog-content{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 00px;
+}
+
+#blog-content button{
+    cursor: pointer;
+}
+
+.blog-latest-post{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(204, 197, 197);
+    border-bottom: 1px solid black;
+    box-shadow: 0 5px 15px -3px rgb(9, 12, 41);
+    min-width: 25%;
+    flex-basis: 30%;
+    text-align: center;
+    opacity: 0;
+    animation-fill-mode: both;
+}
+
+.blog-latest-post:nth-child(1){
+    animation: fade-in 1.00s ease-in forwards;
+
+}
+
+.blog-latest-post:nth-child(2){
+    animation: fade-in 1.00s ease-in forwards;
+    animation-delay: 0.5s;
+}
+
+.blog-latest-post:nth-child(3){
+    animation: fade-in 1.00s ease-in forwards;
+    animation-delay: 1.0s;
+}
+
+.blog-latest-post:nth-child(4){
+    animation: fade-in 1.00s ease-in forwards;
+
+}
+
+.blog-latest-post:nth-child(5){
+    animation: fade-in 1.00s ease-in forwards;
+    animation-delay: 0.5s;
+}
+
+.blog-latest-post:nth-child(6){
+    animation: fade-in 1.00s ease-in forwards;
+    animation-delay: 1.0s;
+}
+
+.blog-latest-post img{
+    object-fit: cover;
+
+    max-width: 100%;
+    max-height: 100%;
+    margin-bottom: 10px;
+}
+
+.blog-latest-post a{
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.blog-latest-post button{
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 1.0rem;
+    color:white;
+    background: rgb(57, 84, 119);
+}
+
+.blog-latest-post button:hover{
+    opacity: 0.8;
+}
+
+.blog-title{
+    border-bottom: 1px solid grey;
+    margin: 10px;
+}
+
+.blog-title:hover{
+    cursor:pointer;
+    color: rgb(57, 84, 119);
+    text-decoration: underline;
+
+}
+
+.blog-content{
+    font-size: 0.9rem;
+    text-align: start;
+    padding: 0px 20px;
+    width: 100%;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    /* border: 1px solid black; */
+}
+
+.popular-posts{
+    opacity: 0;
+}
+
+@keyframes fade-in{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out{
+    from{
+        opacity: 1;
+
+    }
+    to{
+        opacity: 0;
+
+    }
+}
