@@ -5,25 +5,46 @@ const navBar = document.getElementById("nav");
 const navBarStyle = navBar.querySelectorAll("p");
 const loadingImg = loadingPage.querySelector("img");
 
-window.addEventListener("wheel", function(event) {
-    if (event.deltaY > 0) {
-        // User scrolled down, do something
-        navBar.style.animation = "slide-out 0.5s ease-out";
-        setTimeout(() => {
-            navBar.style.display = `none`;
-        }, 475);
-    }
-});
+let prevScrollPos = window.scrollY;
 
-window.addEventListener("wheel", function(event) {
-    if (event.deltaY < 0) {
-        // User scrolled up, do something
-        navBar.style.animation = "slide-in 0.3s ease-in";
-        setTimeout(() => {
-            navBar.style.display = `flex`;
-        }, 250);
+window.addEventListener("scroll", function() {
+    const currentScrollPos = window.scrollY;
+  
+    if (currentScrollPos > prevScrollPos) {
+      // User scrolled down, hide the navigation bar
+      navBar.style.animation = "slide-out 0.5s ease-out";
+      setTimeout(() => {
+        navBar.style.display = "none";
+      }, 100);
+    } else {
+      // User scrolled up, show the navigation bar
+      navBar.style.display = "flex";
+      navBar.style.animation = "slide-in 0.3s ease-in";
     }
-});
+  
+    prevScrollPos = currentScrollPos;
+  });
+  
+
+// window.addEventListener("wheel", function(event) {
+//     if (event.deltaY > 0) {
+//         // User scrolled down, do something
+//         navBar.style.animation = "slide-out 0.5s ease-out";
+//         setTimeout(() => {
+//             navBar.style.display = `none`;
+//         }, 475);
+//     }
+// });
+
+// window.addEventListener("wheel", function(event) {
+//     if (event.deltaY < 0) {
+//         // User scrolled up, do something
+//         navBar.style.animation = "slide-in 0.3s ease-in";
+//         setTimeout(() => {
+//             navBar.style.display = `flex`;
+//         }, 250);
+//     }
+// });
 
 // Boolean Flag
 let isShow = false;

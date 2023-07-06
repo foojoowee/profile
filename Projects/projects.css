@@ -4,15 +4,15 @@
     justify-content: center;
     align-items: center;
     margin: 0px auto;
-
 }
 
 .featured-projects{
     text-align: center;
-    width: 100%;
+    width: 100vw;
     height: 100%;
-    margin-bottom: 50px;
+
     min-width: 750px;
+    margin-bottom: 50px;
 }
 
 .featured-projects h1{
@@ -42,14 +42,14 @@
 }
 
 .project-image{
-    flex: 60%;
+    /* flex: 60%; */
 }
 
 .project-container2{
     display: flex;
     height: 100%;
     flex-direction: column;
-    flex: 40%;
+    /* flex: 40%; */
     transition: scale 0.2s;
 }
 
@@ -117,6 +117,10 @@
 }
 
 .other-projects{
+    text-align: center;
+    width: 100vw;
+    height: 100%;
+    min-width: 750px;
     margin-top: 100px;
 }
 
@@ -185,7 +189,7 @@
     }
 }
 
-@media (max-width: 1024px){
+@media (max-width: 1200px){
     .featured-projects{
         scale: 0.8;
         margin-top: -100px;
@@ -194,72 +198,90 @@
         scale: 0.7;
         margin-top: -400px;
     }
+    .other-projects{
+        margin-bottom: -400px;
+    }
 }
 
 @media (max-width: 768px){
     .featured-projects{
-        scale: 0.7;
-        margin-top: -200px;
+        margin-top: -100px;
+        width: 100%;
+    }
+    .other-projects{
+        width: 100%;
+    }
+    .featured-projects-title h1, .other-projects-title h1{
+        font-size: 2rem;
+        border-bottom: 3px solid grey
     }
     .project-container, .project2-container{
         display: flex;
         flex-direction: column;
-        margin: 0px 0px;
+        justify-content: center;
+        align-items: center;
+        margin: 0px auto;
+        width: 100vw;
     }
     .project2-container{
-        margin-top: 150px;
+        margin-top: 100px;
+        margin-bottom: 10px;
     }
     .project-container2{
         display: flex;
         justify-content: center;
-        margin-left: 50px;
+        width: 80%;
     }
     .project-container3{
         display: flex;
         justify-content: center;
-        margin-left: 150px;
-        width: 500px;
+        width: 80%;
     }
     .featured-projects h1{
-        scale: 0.8;
         margin-top: -100px;
     }
     .other-projects{
-        scale: 0.7;
-        margin-top: -800px;
-    }
-    .other-projects h1{
-        scale: 0.8;
-
+        margin-top: -500px;
     }
     .project-container-description{
         margin-left: 0px;
         padding: 25px;
         border-radius: 10px;
-        width: 600px;
+        width: 100%;
     }
-    .other-project-container-description{
-        width: 600px;
+    .project-container-icon, .project-container-techstack{
+        margin: 0px;
     }
-    .project-container-icon{
-        margin-top: 0px;
+    .project-image, .project-image-right{
+        width: 80%;
     }
     .project-image img{
-        height: 400px;
+        width: 100%;
+        height: auto;
+        margin: 0px;
     }
+    .project-container-title h2{
+        font-size: 1.4rem
+    }
+    .project-container-description{
+        font-size: 1rem;
+    }
+    .other-projects .project-image, .other-projects .project-image-right{
+        margin: 0px;
+    }
+
     .project-image-right img{
-        height: 400px;
-        margin-left: 50px;
+        width: 100%;
+        height: auto;
+        margin: 0px;
     }
-    .other-projects.project-image img{
-        height: 300px;
-        margin-left: 100px;
-    }
-    .other-project-1, .other-project-3{
-        margin-left: 100px
-    }
+
     .other-project-2 .project-container, .other-project-4 .project-container {
         flex-direction: column-reverse;
+    }
+
+    .other-project-1, .other-project-2, .other-project-3{
+        opacity: 1;
     }
 
 }

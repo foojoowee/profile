@@ -31,10 +31,10 @@ window.addEventListener("scroll", function(){
     console.log("image1pos is " + image1Position)
 })
 
-let prevScrollPos = window.pageYOffset;
+let prevScrollPos = window.scrollY;
 
 window.addEventListener("scroll", function() {
-  const currentScrollPos = window.pageYOffset;
+  const currentScrollPos = window.scrollY;
 
   if (currentScrollPos > prevScrollPos) {
     // User scrolled down, hide the navigation bar
