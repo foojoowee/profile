@@ -369,8 +369,6 @@ body{
     }
 } */
 
-
-
 #resume-button a{
     color: white;
     text-decoration: none;
@@ -453,114 +451,6 @@ body{
 }
 
 
-/* Styling for contact.html */
-
-#contact-main-wrapper{
-    margin-left: auto;
-    margin-right: auto;
-    top: 200px;
-    bottom: 200px;
-    height: 40%;
-    width: 40%;
-    min-height: 325px;
-    min-width: 600px;
-    max-width: 800px;
-    color: rgb(197, 197, 197);
-    font-size: 1.2rem;
-    box-shadow: 0 10px 15px -3px rgb(9, 12, 41);
-    border-radius: 10px;
-    animation: fade-in 0.25s ease-in;
-}
-
-#contact-main-wrapper a{
-    text-decoration: none;
-}
-
-#contact-main-wrapper a:hover{
-    text-decoration: underline;
-}
-
-#contact-header {
-    color: white;
-    font-weight: 300;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: rgb(100, 49, 100);
-    height: 80px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-}
-
-.content-header-text{
-    color: rgb(63, 60, 60);
-    font-size: 1.0rem;
-    text-align: center;
-    margin: 30px 30px;
-    padding-bottom: 20px;
-}
-
-#contact-content{
-    display: flex;
-    color: black;
-    justify-content: space-between;
-    margin: 40px 30px;
-}
-
-.contact-icon{
-    display: flex;
-    background: rgb(100, 49, 100);
-    padding: 15px;
-    border: 1px solid black;
-    border-radius: 50%;
-    width: fit-content;
-    margin: auto;
-}
-
-.content-icon img{
-    text-align: center;
-}
-
-#contact-email, #contact-phone, #contact-socials{
-    justify-content: center;
-    text-align: center;
-    padding: 20px 10px;
-    width: 200px;
-    border: 1px solid black;
-    border-radius: 10px;
-    background: rgb(245, 230, 232);
-    transition: scale 0.2s
-}
-
-#contact-email:hover, #contact-phone:hover, #contact-socials:hover{
-    scale: 1.1;  
-}
-
-.contact-content-header{
-    text-transform: uppercase;
-    margin: 10px 0px;
-}
-
-.contact-content-text{
-    font-size: 0.85rem;
-}
-
-.contact-content-text a{
-    color: black;
-}
-
-#contact-newsletter{
-    font-size: 0.9rem;
-    text-align: center;
-    padding-bottom: 30px;
-    color: rgb(107, 105, 105);
-}
-
-#contact-newsletter a{
-    color: rgb(100, 49, 100);
-}
-
-
 @media (max-width: 1024px){
     #footer .links{
         display: none;
@@ -583,11 +473,13 @@ body{
     }
     #copyright{
         margin-top: 15px;
-        scale: 0.65;
+        font-size: 0.8rem;
     }
     #author{
-        scale: 0.65;
+        font-size: 0.8rem;
+        margin-top: 15px;
     }
+    
     #author-name{
         display: none;
         margin-top: 0px;
@@ -616,6 +508,6 @@ body{
     }
     #main-page{
         margin-top: 50px;
-        margin-bottom: 0px;;
+        margin-bottom: 0px;
     }
 }

@@ -220,11 +220,10 @@
 
 @media (max-width: 768px){
     #about-main-wrapper{
-        scale: 0.7;
-        margin-top: 50px;
-        margin-bottom: 0px;
-        max-width: 450px;
-        min-width: 450px;
+        margin-top: 200px;
+        margin-bottom: 100px;
+        min-width: 0px;
+        width: 70%;
         padding-left: 50px;
     }
     #about-content{
@@ -263,6 +262,10 @@
         margin-bottom: -20px;
         opacity: 0;
         animation-delay: 2.5s;
+    }
+    #about-page-2 #about-right-text img{
+        animation-delay: 4.5s;
+
     }
     #resume-button {
         display: none;
