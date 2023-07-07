@@ -2,27 +2,28 @@
     margin-left: auto;
     margin-right: auto;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     top: 200px;
     bottom: 200px;
     height: 50%;
     width: 80%;
-    /* min-height: 400px;
-    min-width: 800px; */
     margin-bottom: 100px;
 }
 
 .blog-header{
     font-size: 1.4em;
+    position: relative;
+    padding-left: 30%;
+    border-bottom: 4px solid rgb(160, 152, 152);
     margin-bottom: 50px;
-    padding-left: 10%;
-    border-bottom: 4px solid rgb(160, 152, 152)
+    margin-top: 200px;
 }
 
 .blog-content{
     display: flex;
     justify-content: space-between;
-    margin: 20px 00px;
+    margin: 20px 0px;
+    width: 70%;
 }
 
 #blog-content button{
@@ -74,8 +75,9 @@
 
 .blog-latest-post img{
     object-fit: cover;
-    max-width: 100%;
-    max-height: 100%;
+    max-height: 225px;
+    min-height: 225px;
+    min-width: 100%;
     margin-bottom: 10px;
 }
 
@@ -93,7 +95,7 @@
 }
 
 .blog-latest-post button:hover{
-    opacity: 0.8;
+    background-color: rgb(77, 77, 214);
 }
 
 .blog-content-container{
@@ -107,11 +109,11 @@
     padding: 10px;
 }
 
-
-
 .blog-title{
     border-bottom: 1px solid grey;
     margin: 10px;
+    text-decoration: none;
+    color: black;
 }
 
 .blog-title:hover{
@@ -159,6 +161,11 @@
 }
 
 @media (max-width: 1024px){
+    .blog-main-wrapper{
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+    }
     .blog-latest-post{
         flex-direction: row;
         border: none;
@@ -168,6 +175,7 @@
     .blog-header{
         font-size: 1.0rem;
         margin-bottom: 10px;
+        margin-top: 100px;
     }
     .blog-content-container{
         width: 60%;
@@ -183,7 +191,9 @@
     }
     .blog-latest-post img, .blog-other-post img{
         width: 40%;
-
+        max-height: 175px;
+        min-height: 0px;
+        min-width: 125px;;
         margin-right: 20px;
     }
     .blog-content-preview{

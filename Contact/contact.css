@@ -15,6 +15,7 @@
     box-shadow: 0 10px 15px -3px rgb(9, 12, 41);
     border-radius: 10px;
     animation: fade-in 0.25s ease-in;
+    margin-top: 200px;
 }
 
 #contact-main-wrapper a{
@@ -120,6 +121,7 @@
         scale: 0.8;
         min-width: 0px;
         width: 70%;
+        margin-top: 100px;
     }
     #main-page{
         margin-top: 50px;

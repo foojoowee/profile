@@ -8,9 +8,20 @@
 
 body{
     font-size: 16px;
-    /* background: url("Assets/blue-bg.jpg"); */
-    opacity: 1.0;
     height: 100%
+}
+
+body::before{
+    content: "";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("Assets/background-1.png");
+    opacity: 0.8;
+    z-index: -10;
 }
 
 /* #main-container{
@@ -450,6 +461,9 @@ body{
    margin: 0px 5px;
 }
 
+#contact-main-wrapper{
+    background-color: rgb(245, 242, 242);
+}
 
 @media (max-width: 1024px){
     #footer .links{
@@ -509,5 +523,11 @@ body{
     #main-page{
         margin-top: 50px;
         margin-bottom: 0px;
+    }
+    #nav{
+        height: 50px;
+    }
+    #profile-pic p{
+        scale: 0.8
     }
 }

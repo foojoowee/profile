@@ -16,7 +16,7 @@
 }
 
 .featured-projects h1{
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     margin-bottom: 75px;
 }
 
@@ -39,10 +39,6 @@
 
 .project2-container{
     margin-top: 100px;
-}
-
-.project-image{
-    /* flex: 60%; */
 }
 
 .project-container2{
@@ -135,6 +131,7 @@
     border: 1px solid black;
     border-radius: 10px;
     box-shadow: 0 0 5px 5px #494545;
+    background: rgb(245, 244, 244);
 }
 
 .other-projects .project-image{
