@@ -16,57 +16,71 @@
 
 <body> 
     <!-- Section for preloading page animation -->
-    <section>
+    <!-- <section>
         <div id="loading-page">
             <img src="/Assets/meepit.png">
             <div id="loading-message">
                 <p>Hello</p>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- Section for navigation bar -->
     <header id="nav">
-        <div id="profile-pic">
-            <p></p>
-        </div>
-        <div class="links">
-            <a href="about.html">About</a>
-            <a href="projects.html">Projects</a>
-            <a href="blog.html">Blog</a>
-            <a href="contact.html">Contact</a>
-            <a href="index.html"><img src="Assets/home.svg"></a>
-        </div>
-        <div id="links-hamburger" onclick="showHideMenu()">
-            <img src="Assets/hamburger-icon.svg" alt="">
-        </div>
-        <div id="drop-down-menu">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="projects.html">Projects</a>
-            <a href="blog.html">Blog</a>
-            <a href="contact.html">Contact</a>
-        </div>
     </header>
 
-
-    <div id="main-container">
-        <div id="dummy-div"></div>
+    <div id="index-main-main-container">
+    <div id="index-main-container">
         <!-- Section for main content --> 
         <section>
-            <div id="main-content">
-                <div id="main-page">
-                    <p>Hello,</p>
+            <div class="index-main-page">
+                <div class="index-page-container">
+                    <div class="index-text1">
+                        Hi there!
+                    </div>
+                    <div class="index-text2">
+                        <p class="index-text2-p1">I am Joo Wee, <br>
+                        <p class="index-text2-p2">an aspiring Web Developer.</p>
+                    </div>
+
+                    <div class="index-text3">
+                        I am currently transitioning from being a civil engineer to a frontend/fullstack developer, inspired to build websites and applications. Please check out my portfolio.
+                    </div>
+                    <div class="index-button">
+                        <a href="./about.html" class="delay-link">
+                            <button class="button1" onclick="fadeOut()">
+                                More About Me >
+                            </button>
+                        </a>
+                        <a href="./projects.html" class="delay-link">
+                            <button class="button1" onclick="fadeOut()">
+                                My Projects >
+                            </button>
+                        </a>
+                    </div>
+                    <div id="index-icons">
+                        <div>
+                            <a href="https://www.facebook.com/foo.joowee" target="_blank">
+                                <img src="./Assets/ICONS/icon-facebook.svg" alt="facebook">
+                            </a>
+                            <a href="https://www.linkedin.com/in/joo-wee-foo" target="_blank">
+                                <img src="./Assets/ICONS/icon-linkedin.svg" alt="linkedin">
+                            </a>
+                            <a href="https://github.com/foojoowee" target="_blank">
+                                <img src="./Assets/ICONS/icon-github.svg" alt="github">
+                            </a>
+                        </div> 
+                    </div>
                 </div>
             </div>
         </section>
 
 
-        <!-- Footer Section -->
-        <footer id="footer">
-
-        </footer>
     </div>
+    </div>
+    <!-- Footer Section -->
+    <!-- <footer id="footer">
+    </footer> -->
 
     <script src="index.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>

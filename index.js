@@ -3,7 +3,7 @@ const loadingMsg = document.getElementById("loading-message")
 const mainContent = document.getElementById("main-container")
 const navBar = document.getElementById("nav");
 const navBarStyle = navBar.querySelectorAll("p");
-const loadingImg = loadingPage.querySelector("img");
+// const loadingImg = loadingPage.querySelector("img");
 
 let prevScrollPos = window.scrollY;
 
@@ -25,26 +25,20 @@ window.addEventListener("scroll", function() {
     prevScrollPos = currentScrollPos;
   });
   
+const delayLink = document.getElementsByClassName('delay-link');
 
-// window.addEventListener("wheel", function(event) {
-//     if (event.deltaY > 0) {
-//         // User scrolled down, do something
-//         navBar.style.animation = "slide-out 0.5s ease-out";
-//         setTimeout(() => {
-//             navBar.style.display = `none`;
-//         }, 475);
-//     }
-// });
+for (let i = 0; i < delayLink.length; i++) {
+  delayLink[i].addEventListener('click', function(event) {
+    event.preventDefault();
 
-// window.addEventListener("wheel", function(event) {
-//     if (event.deltaY < 0) {
-//         // User scrolled up, do something
-//         navBar.style.animation = "slide-in 0.3s ease-in";
-//         setTimeout(() => {
-//             navBar.style.display = `flex`;
-//         }, 250);
-//     }
-// });
+    const targetUrl = this.getAttribute('href');
+
+    setTimeout(() => {
+      window.location.href = targetUrl;
+    }, 1500);
+  });
+}
+
 
 // Boolean Flag
 let isShow = false;
@@ -63,7 +57,28 @@ function showHideMenu(){
     }
 }
 
-  
+const mainContainer = document.getElementById("index-main-container");
+
+function fadeOut(){
+  mainContainer.style.animation = "fade-out 2.0s ease-out"
+}
+
+
+const textDisplay3 = document.getElementsByClassName("index-text3")[0];
+const textDisplay4 = document.getElementsByClassName("index-button")[0];
+const textDisplay5 = document.getElementById("index-icons");
+
+
+window.addEventListener("load", function(){
+  setTimeout(()=>{
+    textDisplay3.style.display = "flex"
+  }, 5000)
+  setTimeout(()=>{
+    textDisplay4.style.display = "flex"
+    textDisplay5.style.display = "flex"
+  }, 7000)
+})
+
 //Load page code-to add when deploying website
 
 // window.addEventListener("load", function(){

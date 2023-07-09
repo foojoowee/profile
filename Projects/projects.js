@@ -2,6 +2,12 @@ const mainContent = document.getElementById("main-container")
 const navBar = document.getElementById("nav");
 const navBarStyle = navBar.querySelectorAll("p");
 
+window.addEventListener('load', () => {
+    setTimeout(() => {
+      navBar.style.display = "flex"
+    }, 200)
+  })
+
 window.addEventListener("scroll", function(){
     const featuredProject1 = document.getElementsByClassName("featured-project-1");
     const featuredProject2 = document.getElementsByClassName("featured-project-2")
