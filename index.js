@@ -77,6 +77,9 @@ window.addEventListener("load", function(){
     textDisplay4.style.display = "flex"
     textDisplay5.style.display = "flex"
   }, 7000)
+  setTimeout(()=>{
+    navBar.style.display = "flex"
+  }, 15000)
 })
 
 //Load page code-to add when deploying website
