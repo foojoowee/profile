@@ -56,3 +56,19 @@ window.addEventListener("scroll", function() {
 
   prevScrollPos = currentScrollPos;
 });
+
+let isShow = false;
+function showHideMenu(){
+    const dropMenu = document.getElementById("drop-down-menu")
+    if (isShow){
+        dropMenu.style.animation = "slide-out-X 0.5s ease-out";
+        setTimeout(() => {
+            dropMenu.style.display = "none";;
+        }, 450);
+        isShow = false;
+    } else {
+        dropMenu.style.display = "flex";
+        dropMenu.style.animation = "slide-in-X 0.3s ease-in";
+        isShow = true;
+    }
+}
