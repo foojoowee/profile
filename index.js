@@ -71,20 +71,20 @@ const textDisplay5 = document.getElementById("index-icons");
 
 window.addEventListener("load", function(){
   mainContainer.style.display = "none"
-  setTimeout(() =>{
-    loadingPage.style.animation = "fade-out 0.5s ease-out forwards"
-    mainContainer.style.display = "block"
-    setTimeout(()=>{
-      textDisplay3.style.display = "flex"
-    }, 5000)
-    setTimeout(()=>{
-      textDisplay4.style.display = "flex"
-      textDisplay5.style.display = "flex"
-    }, 7000)
-    setTimeout(()=>{
-      navBar.style.display = "flex"
-    }, 15000)
-  }, 5000)
+  // setTimeout(() =>{
+  //   loadingPage.style.animation = "fade-out 0.5s ease-out forwards"
+  //   mainContainer.style.display = "block"
+  //   setTimeout(()=>{
+  //     textDisplay3.style.display = "flex"
+  //   }, 5000)
+  //   setTimeout(()=>{
+  //     textDisplay4.style.display = "flex"
+  //     textDisplay5.style.display = "flex"
+  //   }, 7000)
+  //   setTimeout(()=>{
+  //     navBar.style.display = "flex"
+  //   }, 15000)
+  // }, 5000)
 })
 
 
