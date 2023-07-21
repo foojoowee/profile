@@ -300,7 +300,7 @@ body{
 }
 
 .index-text2{
-    font-size: 3.0rem;
+    font-size: clamp(1.5rem, 4vw, 3.0rem);
     margin-bottom: 30px;
 }
 
@@ -332,7 +332,7 @@ body{
     display: none;
     width: 70%;
     margin-bottom: 50px;
-    font-size: 1.3rem;
+    font-size: clamp(1.0rem, 2vw, 1.3rem);
     animation: slide-in2 1s ease-in;
 }
 
@@ -698,22 +698,21 @@ body{
     }
     .index-page-container{
         width: 80%;
-        top: 15%;
-        left: 15%
+        top: 15%
     }
     .index-text1{
-        font-size: 1.0rem;
+        font-size: 0.9rem;
     }
     
     .index-text2{
-        font-size: 1.5rem;
+        font-size: 1.3rem;
 
     }
     
     .index-text3{
         width: 80%;
         margin-bottom: 50px;
-        font-size: 1.0rem;
+        font-size: 0.9em;
     }
 
     .index-button button{
