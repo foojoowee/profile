@@ -77,15 +77,15 @@ window.addEventListener("load", function(){
     mainContainer.style.display = "block"
     setTimeout(()=>{
       textDisplay3.style.display = "flex"
-    }, 5000)
+    }, 4000)
     setTimeout(()=>{
       textDisplay4.style.display = "flex"
       textDisplay5.style.display = "flex"
-    }, 7000)
+    }, 6000)
     setTimeout(()=>{
       navBar.style.display = "flex"
-    }, 15000)
-  }, 5000)
+    }, 10000)
+  }, 3000)
 })
 
 

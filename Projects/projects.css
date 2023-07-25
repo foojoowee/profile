@@ -128,7 +128,6 @@ body::before{
 }
 
 .other-projects{
-
     width: 100vw;
     height: 100%;
     min-width: 750px;
@@ -138,7 +137,12 @@ body::before{
 .other-projects h1{
     text-align: center;
     font-size: 2.5rem;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
+}
+
+.other-projects p{
+    text-align: center;
+    margin-bottom: 40px;
 }
 
 .other-project-container-description{
@@ -175,6 +179,10 @@ body::before{
 }
 
 .other-project-4{
+    margin-bottom: 30px;
+}
+
+.other-project-5{
     margin-bottom: 200px;
 }
 
@@ -182,6 +190,29 @@ body::before{
     scale: 1.05;
 }
 
+.other-project-5 .project-image{
+    position: relative;
+}
+
+.other-project-5 .project-image img{
+    opacity: 0.4
+}
+
+.other-project-5 .coming-soon{
+    position: absolute;
+    font-size: 3.5rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    color: rgb(216, 216, 216);
+    font-weight: 600;
+    text-shadow: 
+    -2px -2px 0 #000, /* Increase shadow offsets */
+     2px -2px 0 #000, /* Increase shadow offsets */
+    -2px 2px 0 #000,  /* Increase shadow offsets */
+     2px 2px 0 #000;  /* Increase shadow offsets */
+}
 
 @keyframes fade-in{
     from{
@@ -219,9 +250,11 @@ body::before{
     .featured-projects{
         margin-top: -100px;
         width: 100%;
+        min-width: 0px;
     }
     .other-projects{
         width: 100%;
+        min-width: 0px;
     }
     .featured-projects-title h1, .other-projects-title h1{
         font-size: 2rem;
@@ -286,12 +319,17 @@ body::before{
         height: auto;
         margin: 0px;
     }
-
     .other-project-2 .project-container, .other-project-4 .project-container {
         flex-direction: column-reverse;
     }
     .other-project-1, .other-project-2, .other-project-3{
         opacity: 1;
+    }
+    .other-project-5 .coming-soon{
+        font-size: 1.5rem;
+    }
+    .other-project-5{
+        margin-bottom: 0;
     }
 
 }

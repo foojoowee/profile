@@ -18,10 +18,12 @@ window.addEventListener("scroll", function(){
     const otherProject2 = document.getElementsByClassName("other-project-2");
     const otherProject3 = document.getElementsByClassName("other-project-3");
     const otherProject4 = document.getElementsByClassName("other-project-4");
+    const otherProject5 = document.getElementsByClassName("other-project-5");
     let oProject1Position = otherProject1[0].getBoundingClientRect().top;
     let oProject2Position = otherProject2[0].getBoundingClientRect().top;
     let oProject3Position = otherProject3[0].getBoundingClientRect().top;
     let oProject4Position = otherProject4[0].getBoundingClientRect().top;
+    let oProject5Position = otherProject5[0].getBoundingClientRect().top;
 
     if(window.innerWidth > 768){
         if (fProject1Position - windowHeight <= -1350){
@@ -76,6 +78,15 @@ window.addEventListener("scroll", function(){
             otherProject4[0].style.opacity = 0;
             otherProject4[0].style.transform = "translateX(-1000px)";
         }
+        if (oProject5Position - windowHeight <= -150 &&
+            oProject5Position - windowHeight >= -1250){
+            otherProject5[0].style.opacity = 1;
+            otherProject5[0].style.transform = "translateX(0px)";
+            otherProject5[0].style.transition = "opacity 0.5s ease-in-out, transform 1.2s ease-in-out";
+        } else{
+            otherProject5[0].style.opacity = 0;
+            otherProject5[0].style.transform = "translateX(1000px)";
+        }
     } else{
         featuredProject1[0].style.opacity = 1;
         featuredProject2[0].style.opacity = 1;
@@ -83,10 +94,12 @@ window.addEventListener("scroll", function(){
         otherProject2[0].style.opacity = 1;
         otherProject3[0].style.opacity = 1;
         otherProject4[0].style.opacity = 1;
+        otherProject5[0].style.opacity = 1;
         otherProject1[0].style.transform = "translateX(0px)";
         otherProject2[0].style.transform = "translateX(0px)";
         otherProject3[0].style.transform = "translateX(0px)";
         otherProject4[0].style.transform = "translateX(0px)";
+        otherProject5[0].style.transform = "translateX(0px)";
     }
 
 })
@@ -171,7 +184,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     console.log(project2imageArray[0])
     let i = 1
     setInterval(() => {
-        project2image.src = `./Assets/Projects/blackjack-${i}.png`;
+        project2image.src = `./Assets/Projects/gym-${i}.png`;
         if(i > 2){
             i-= 3
         }
