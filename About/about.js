@@ -78,8 +78,8 @@ const text4 = "Currently, I am also trying to hone my skills in algorithms/ data
 const text5 = "If you are reading this, chances are you have found my website on my GitHub portfolio or resume. My projects can be found "
 const text6 = "Thanks for checking out my portfolio! Feel free to  "
 const text7 = ",I will try my best to respond promptly.  "
-const projectsLink = `<a href="/projects.html">here.</a>`
-const contactLink = `<a href="/contact.html">contact me</a>`
+const projectsLink = `<a href="./projects.html">here.</a>`
+const contactLink = `<a href="./contact.html">contact me</a>`
 const typingSpeed = 10; // Adjust the typing speed (in milliseconds) as desired
 let charIndex = 0;
 let charIndex2 = 0;
